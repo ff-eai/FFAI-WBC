@@ -40,3 +40,5 @@ We would like to acknowledge the following projects and datasets that this work 
 ## License
 
 This repository’s original content is released for **non-commercial research, education, and community use only**.
+
+This project may download and install additional third-party open-source components. Review their license terms before use.
