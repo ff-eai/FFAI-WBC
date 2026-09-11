@@ -6,8 +6,8 @@ In-house whole-body control framework for FF robots, based on NVIDIA GR00T WBC /
 
 ![FF Master multi-motion showcase](assets/ff_master_motion_showcase.webp)
 
-- [G1 → FF Master web viewer](https://zhiyangrobot.github.io/g1-ffmaster-retarget/)
-- [G1 → FF Master retarget dataset](https://huggingface.co/datasets/zhiyangrobot/g1-ffmaster-retarget)
+- [Unitree G1 → FF Master web viewer](https://zhiyangrobot.github.io/g1-ffmaster-retarget/)
+- [Unitree G1 → FF Master retarget dataset](https://huggingface.co/datasets/zhiyangrobot/g1-ffmaster-retarget)
 
 ## Scope
 
@@ -22,7 +22,7 @@ Private in-house repository under `ff-eai`.
 We would like to acknowledge the following projects and datasets that this work builds on:
 
 - [NVlabs/GR00T-WholeBodyControl](https://github.com/NVlabs/GR00T-WholeBodyControl) — source codebase for whole-body control / GEAR-SONIC components used in this repo
-- [NVIDIA/soma-retargeter](https://github.com/NVIDIA/soma-retargeter) — motion retargeting tooling used for G1 → FF Master conversion
+- [NVIDIA/soma-retargeter](https://github.com/NVIDIA/soma-retargeter) — motion retargeting tooling used for Unitree G1 → FF Master conversion
 - [ChingMu MotionDecode](https://chingmudata.github.io/MotionDecode/) — motion dataset / showcase that our retarget demos and multi-robot preview build on
 
 ## License
