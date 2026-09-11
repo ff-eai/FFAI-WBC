@@ -6,9 +6,8 @@ In-house whole-body control framework for FF robots, based on NVIDIA GR00T WBC /
 
 ![FF Master multi-motion showcase](assets/ff_master_motion_showcase.webp)
 
-Six FF Master robots, each playing a different retargeted motion (pinned formation, studio lighting).
-
-[Download MP4](assets/ff_master_motion_showcase.mp4) · [Clip browser](https://zhiyangrobot.github.io/g1-ffmaster-retarget/) · [CSV dataset](https://huggingface.co/datasets/zhiyangrobot/g1-ffmaster-retarget)
+- [G1 → FF Master web viewer](https://zhiyangrobot.github.io/g1-ffmaster-retarget/)
+- [G1 → FF Master retarget dataset](https://huggingface.co/datasets/zhiyangrobot/g1-ffmaster-retarget)
 
 ## Scope
 
