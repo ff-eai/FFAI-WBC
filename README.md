@@ -11,11 +11,11 @@ In-house whole-body control framework for FF robots, based on NVIDIA GR00T WBC /
 
 ### WBC demos
 
-<video src="assets/wbc_demo_clips/Lark20260819-145153.mp4" controls muted playsinline width="480"></video>
+![WBC demo 1](assets/wbc_demo_clips/Lark20260819-145153.webp)
 
-<video src="assets/wbc_demo_clips/Lark20260819-145156_before_turn.mp4" controls muted playsinline width="480"></video>
+![WBC demo 2 (before turn)](assets/wbc_demo_clips/Lark20260819-145156_before_turn.webp)
 
-<video src="assets/wbc_demo_clips/Lark20260819-145200.mp4" controls muted playsinline width="480"></video>
+![WBC demo 3](assets/wbc_demo_clips/Lark20260819-145200.webp)
 
 ## Scope
 
