@@ -9,6 +9,14 @@ In-house whole-body control framework for FF robots, based on NVIDIA GR00T WBC /
 - [Unitree G1 → FF Master web viewer](https://zhiyangrobot.github.io/g1-ffmaster-retarget/)
 - [Unitree G1 → FF Master retarget dataset](https://huggingface.co/datasets/zhiyangrobot/g1-ffmaster-retarget)
 
+### WBC demos
+
+<video src="assets/wbc_demo_clips/Lark20260819-145153.mp4" controls muted playsinline width="480"></video>
+
+<video src="assets/wbc_demo_clips/Lark20260819-145156_before_turn.mp4" controls muted playsinline width="480"></video>
+
+<video src="assets/wbc_demo_clips/Lark20260819-145200.mp4" controls muted playsinline width="480"></video>
+
 ## Scope
 
 > TBD — project scope, modules, and training/deployment notes will live here.
