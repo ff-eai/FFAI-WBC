@@ -27,8 +27,8 @@ We would like to acknowledge the following projects and datasets that this work 
 
 ## License
 
-Source code in this repository is intended to follow **Apache-2.0**, consistent with the open-source code portions of the upstream projects above.
+This codebase is licensed under Apache-2.0.
 
-**Note:** [GR00T-WholeBodyControl](https://github.com/NVlabs/GR00T-WholeBodyControl) is dual-licensed — source code under Apache-2.0, and model weights under the **NVIDIA Open Model License**. If this repo includes or redistributes those weights (or derivatives), that NVIDIA license also applies to those assets. Review upstream license terms before use or redistribution.
+**This project is for non-commercial use only.** Commercial use is not permitted.
 
 This project may download and install additional third-party open-source components. Review their license terms before use.
