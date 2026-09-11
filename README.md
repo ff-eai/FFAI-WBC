@@ -39,8 +39,12 @@ We would like to acknowledge the following projects and datasets that this work 
 
 ## License
 
-This codebase is licensed under Apache-2.0.
+This repository’s original content is released for **non-commercial research, education, and community use only**.
 
-**This project is for non-commercial use only.** Commercial use is not permitted.
+Commercial use is not permitted without a separate written agreement.
+
+This work builds on third-party software and datasets (including GEAR-SONIC / GR00T Whole-Body Control components and motion-capture data). Those components remain under their own licenses and terms; you must comply with them as well.
 
 This project may download and install additional third-party open-source components. Review their license terms before use.
+
+No warranty is provided. Use at your own risk.
