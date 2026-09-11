@@ -25,10 +25,6 @@ In-house whole-body control framework for FF robots, based on NVIDIA GR00T WBC /
 
 > TBD — project scope, modules, and training/deployment notes will live here.
 
-## Status
-
-Private in-house repository under `ff-eai`.
-
 ## Acknowledgments
 
 We would like to acknowledge the following projects and datasets that this work builds on:
