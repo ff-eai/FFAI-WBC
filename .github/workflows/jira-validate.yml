@@ -1,0 +1,23 @@
+name: "Call FF-EAI JIRA validate"
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+on:
+  pull_request:
+    # `edited` is not in the default set (opened / synchronize / reopened), so
+    # without it a developer who fixes a PR title missing its EAI-<n>: prefix sees
+    # nothing happen -- the only ways to re-trigger were closing and reopening the
+    # PR or pushing a commit. The title is read from the event payload, so
+    # `gh run rerun` replays the stale title and cannot help either.
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  call-jira-validate:
+    uses: ff-eai/.github/.github/workflows/jira-validate-reusable.yml@main
+    secrets:
+      JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
+      JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+      JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}

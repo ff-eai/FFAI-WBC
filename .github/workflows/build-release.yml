@@ -1,0 +1,26 @@
+name: "Build and Release"
+
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: "Tag to build and release (format: v<MAJOR>.<MINOR>.<PATCH>)"
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  call-build-release:
+    uses: ff-eai/.github/.github/workflows/build-release-reusable.yml@main
+    with:
+      tag_name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag_name || github.ref_name }}
+      runs_on: ubuntu-24.04
+    secrets:
+      NEXUS_USER: ${{ secrets.NEXUS_USER }}
+      NEXUS_PASS: ${{ secrets.NEXUS_PASS }}

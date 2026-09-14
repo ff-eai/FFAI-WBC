@@ -1,0 +1,52 @@
+name: "Call FF-EAI Jira tag sync"
+
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: "Tag to process (for manual run)"
+        required: true
+        type: string
+      release_branch:
+        description: "Release branch (release/yyyy.mm) to tag. Only needed when creating a vX.Y.Z tag that does not exist yet"
+        required: false
+        type: string
+      previous_tag:
+        description: "Tag to diff against, overriding automatic discovery. Only needed when this is the first tag of its format in the repo"
+        required: false
+        type: string
+      sync_component_tags:
+        description: "If true, record vX.Y.Z component releases in Jira. Off by default"
+        required: false
+        default: false
+        type: boolean
+      dry_run:
+        description: "If true, do not write to Jira"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  call-jira-tag-sync:
+    uses: ff-eai/.github/.github/workflows/jira-tag-sync-reusable.yml@main
+    with:
+      tag_name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag_name || github.ref_name }}
+      release_branch: ${{ github.event_name == 'workflow_dispatch' && inputs.release_branch || '' }}
+      previous_tag: ${{ github.event_name == 'workflow_dispatch' && inputs.previous_tag || '' }}
+      sync_component_tags: ${{ github.event_name == 'workflow_dispatch' && inputs.sync_component_tags || false }}
+      dry_run: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || false }}
+    secrets:
+      JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
+      JIRA_TOKEN: ${{ secrets.JIRA_TOKEN }}
+      JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
+      # Only used by repositories that have submodules: the superproject records
+      # just a gitlink SHA, so the tickets of work done inside a submodule are
+      # read from that submodule's own commits, which needs cross-repo read access.
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}

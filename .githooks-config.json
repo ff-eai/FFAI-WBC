@@ -1,0 +1,54 @@
+{
+  "commit-msg": {
+    "jira_project": "EAI",
+    "min_message_length": 10,
+    "max_subject_length": 1028,
+    "require_type": false,
+    "allowed_types": ["feat", "fix", "hotfix", "docs", "style", "refactor", "perf", "test", "chore", "build", "ci", "revert", "security"],
+    "require_resolved_status": true,
+    "required_statuses": ["Resolved"],
+    "epic_required_statuses": ["Resolved", "In Progress"],
+    "jira_base_url": "https://ff-cloud-jira.atlassian.net"
+  },
+  "pre-commit": {
+    "protected_branches": ["main", "master", "release/.*"],
+    "checks": {
+      "conflict_markers": {
+        "enabled": true,
+        "blocking": true
+      },
+      "debug_statements": {
+        "enabled": true,
+        "blocking": false,
+        "patterns": ["console\\.log", "debugger", "print\\(", "var_dump", "dd\\(", "dump\\("]
+      },
+      "todo_comments": {
+        "enabled": false,
+        "blocking": false,
+        "patterns": ["TODO", "FIXME", "XXX", "HACK"]
+      },
+      "large_files": {
+        "enabled": true,
+        "blocking": false,
+        "max_size_bytes": 104857600
+      },
+      "sensitive_data": {
+        "enabled": true,
+        "blocking": false,
+        "patterns": [
+          "password",
+          "api_key",
+          "secret",
+          "token",
+          "private_key",
+          "aws_access_key_id",
+          "aws_secret_access_key"
+        ]
+      },
+      "trailing_whitespace": {
+        "enabled": true,
+        "blocking": false
+      }
+    }
+  }
+}
